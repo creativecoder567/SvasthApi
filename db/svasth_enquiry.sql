@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 01, 2018 at 03:08 PM
+-- Generation Time: Feb 01, 2018 at 04:05 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.10
 
@@ -3259,18 +3259,20 @@ CREATE TABLE `products` (
   `halflitre` int(11) NOT NULL,
   `shipping` int(20) NOT NULL,
   `offer` int(20) NOT NULL,
-  `availability` int(1) NOT NULL
+  `availability` int(1) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `title`, `path`, `price`, `halflitre`, `shipping`, `offer`, `availability`) VALUES
-(1, 'Milk', 'http://svasthlife.com/android/productimages/milk.png', 74, 38, 10, 20, 1),
-(2, 'Cheese', 'http://svasthlife.com/android/productimages/cheese.png', 100, 0, 0, 0, 0),
-(3, 'Ghee', 'http://svasthlife.com/android/productimages/ghee.png', 100, 0, 0, 0, 0),
-(4, 'Butter', 'http://svasthlife.com/android/productimages/butter.png', 100, 0, 0, 0, 0);
+INSERT INTO `products` (`id`, `title`, `path`, `price`, `halflitre`, `shipping`, `offer`, `availability`, `created_at`, `updated_at`) VALUES
+(1, 'Milk', 'http://svasthlife.com/android/productimages/milk.png', 74, 38, 10, 20, 1, '2018-02-01 15:05:18', '2018-02-01 15:05:18'),
+(2, 'Cheese', 'http://svasthlife.com/android/productimages/cheese.png', 100, 0, 0, 0, 0, '2018-02-01 15:05:18', '2018-02-01 15:05:18'),
+(3, 'Ghee', 'http://svasthlife.com/android/productimages/ghee.png', 100, 0, 0, 0, 0, '2018-02-01 15:05:18', '2018-02-01 15:05:18'),
+(4, 'Butter', 'http://svasthlife.com/android/productimages/butter.png', 100, 0, 0, 0, 0, '2018-02-01 15:05:18', '2018-02-01 15:05:18');
 
 -- --------------------------------------------------------
 
