@@ -18,7 +18,10 @@ class ProductResource extends Resource
           'title'=>$this->title,
           'path'=>$this->path,
           'price'=>$this->price,
-          'halflitre'=>$this->halflitre 
+          'halflitre'=>$this->halflitre,
+          'href'=>[
+            'reviews'=>route('reviews.index',$this->id)
+            ]
         ];
     }
 }
